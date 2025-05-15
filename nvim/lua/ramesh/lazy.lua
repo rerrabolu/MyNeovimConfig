@@ -14,7 +14,6 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup(
 	{
 		{import = "ramesh.plugins"},
-		{import = "ramesh.plugins.lsp"}
 	},
 	{
 		install = {
