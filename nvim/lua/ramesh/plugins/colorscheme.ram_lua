@@ -1,0 +1,14 @@
+
+-- Load the plugin for colorscheme at launch oft-night
+-- nvim by setting its priority to be high. Also
+-- set the colorscheme for nvim via vim.cmd
+return {
+	"folke/tokyonight.nvim",
+	lazy = false,
+	priority = 900,
+	config = function()
+		vim.cmd([[colorscheme tokyonight-night]])
+	end,
+}
+
+
