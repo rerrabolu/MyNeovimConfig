@@ -1,0 +1,108 @@
+The following is a brief summary of the procedure one can
+follow in setting up vim/gvim to navigate a large code base
+such as Linux Kernel
+
+Step 1: Install vim-plug
+
+	#
+	#  Create the directory given if needed
+	#  Will download the file plug.vim to the given directory
+	#
+	curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+		https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+Step 2: Create following directories
+
+	#
+	# Where plugins get installed
+	#
+	mkdir -p ~/.vim/plugged
+
+	#
+	# Folder to define config files to identify
+	# filetypes that vim may not pickup
+	#
+	#	make.vim to detect (M/m)akefile(s)
+	#
+	mkdir -p ~/.vim/ftdetec
+
+Step 3: Create following preferences
+
+	#
+	# Your preferred LEADER KEY to use in mapping
+	# various commands in insert, visual and normal
+	# modes, either recursively or non-recursively
+	#
+	touch  ~/.vim/myleader.vim
+
+	#
+	# Your standard preferences to bind
+	#
+	# This config file should not define
+	# or enable things that depend on any
+	# plugins
+	#
+	touch  ~/.vim/myprefs.vim
+
+	#
+	# Your preferred key bindings
+	#
+	# This config file should not define
+	# or enable things that depend on any
+	# plugins
+	#
+	touch  ~/.vim/mykeys.vim
+
+Step 4: Create the config file that laoas various plugins
+
+	#
+	# List of plugins to load using a pluing manager
+	# such as vim-plug
+	#
+	touch  ~/.vim/plugins.vim
+
+Step 5: Create the config files that depend upon plugins
+
+	#
+	# Your non-standard key mappings i.e. they depend
+	# upon one or more plugins
+	#
+	touch  ~/.vim/plug-keys.vim
+
+	#
+	# Your preferred colorscheme to bind. The choice
+	# of colorscheme to bind come from a plugin and
+	# are not built-in
+	#
+	touch  ~/.vim/plug-colors.vim
+
+Step 5: Create the master config file
+
+	#
+	# Master config file
+	#
+	# Config file must specify things in following order
+	#
+	#		set nocompatible
+	#			This ensure access to all vim features
+	#
+	#		Load config file that defines leader key
+	#				e.g. myleader.vim
+	#
+	#		Load various config files that do not depend
+	#			upon a plugin i.e. they are built-ins 
+	#			e.g. mykeys.vim
+	#			e.g. myprefs.vim
+	#				 etc
+	#				 (e.g. make.vim)
+	#
+	#		Code to load the various plugins
+	#			e.g. plugins.vim
+	#
+	#		Load various config files that depend on plugins
+	#			e.g. plug-keys.vim
+	#			e.g. plug-colors.vim
+	#
+
+
+
