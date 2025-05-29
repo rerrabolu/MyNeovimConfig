@@ -23,6 +23,14 @@ call plug#begin('~/.vim/plugged')
     Plug 'tpope/vim-commentary'
 
     "
+    " Plugin to enable maximization fo a window
+    " e.g. You split a window into two and you want
+    " to maximize one of the child windows. This pluing
+    " will allow that
+    "
+    Plug 'szw/vim-maximizer'
+
+    "
     " Plugins to help search for various symbols. Uses
     " Fuzzy finder logic
     "
