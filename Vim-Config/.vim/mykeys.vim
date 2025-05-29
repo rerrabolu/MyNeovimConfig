@@ -3,15 +3,11 @@
 " Located in $HOME/.vim directory
 "
 
-let mapleader= ","
-let g:map_leader = ","
+let mapleader = ","
+" let g:mapleader= ","
+" let maplocalleader=","
+" let g:maplocalleader=","
 
-" 
-" Key shortcuts to Save, Quie and do both in one comamnd
-"
-nnoremap <leader>w :w<CR>
-nnoremap <leader>q :q<CR>
-nnoremap <leader>x :x<CR>
 
 "
 " Clear search highlight
@@ -34,14 +30,37 @@ nnoremap <leader>ln :set number!<CR>
 " that are currently open - left, right, top and
 " lastly the bottom
 "
-nnoremap <leader>sv :vsplit<CR>
-nnoremap <leader>sh :split<CR>
-nnoremap <leader>cw :close<CR>
 
-nnoremap <leader>nw <C-w>l
-nnoremap <leader>pw <C-w>h
-nnoremap <leader>dw <C-w>j
-nnoremap <leader>tw <C-w>k
+" Slit window vertically
+nnoremap <leader>sv :vsplit<CR>
+
+" Slit window horizontally
+nnoremap <leader>sh :split<CR>
+
+" Clost a Slit window
+nnoremap <leader>wc :close<CR>
+
+" Move cursor to right window
+nnoremap <leader>wr <C-w>l
+
+" Move cursor to left window
+nnoremap <leader>wl <C-w>h
+
+" Move cursor to top/up window
+nnoremap <leader>wu <C-w>k
+
+" Move cursor to bottom/down window
+nnoremap <leader>wd <C-w>j
+
+"
+" Better TabWindow navigation
+"
+" Allows cursor to move between various Tab windows
+" that are currently open - left, right
+"
+nnoremap <leader>tn :tabnew<CR>
+nnoremap <leader>tr :tabnext<CR>
+nnoremap <leader>tl :tabprev<CR>
 
 
 " Resize windows
@@ -61,8 +80,12 @@ nnoremap <leader><Left> :vertical resize -5<CR>
 " Use these shortcuts in Normal and Visual mode to copy
 " andpaste lines of code to different windows
 "
+
+" Copy (y) and Paste (p) in Normal mode
 nnoremap <leader>y "+y
 nnoremap <leader>p "+p
+
+" Copy (y) and Paste (p) in Visual mode
 vnoremap <leader>y "+y
 vnoremap <leader>p "+p
 
