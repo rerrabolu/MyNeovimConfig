@@ -227,7 +227,12 @@ colorscheme murphy
 "   set guifont=Courier_New:h14:cANSI
 "   set guifont=Monospace\ 12
 "
-set guifont=Monospace\ 14
+set guifont=Monospace\ 17
+
+"
+" Print only file name on the TAB window
+"
+set guitablabel=%
 
 "
 " Disable BELL on ESC keyboard button
